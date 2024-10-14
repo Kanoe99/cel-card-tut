@@ -1,14 +1,17 @@
 {
-  "name": "test-electron",
+  "name": "cel-card",
+  "product-name": "Celebration Cards",
   "version": "1.0.0",
-  "description": "Hello World!",
-  "main": "index.js",
+  "description": "app to create celebration cards",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^32.2.0"
+  "author": "SemyonG",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^32.2.0",
+    "resize-img": "^1.1.2",
+    "toastify-js": "^1.12.0"
   }
 }
