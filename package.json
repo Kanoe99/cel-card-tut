@@ -21,7 +21,7 @@
   "build": {
     "appId": "com.yourdomain.celcard",
     "directories": {
-      "output": "dist"
+      "output": "C:\\Users\\66.GusevSM\\Desktop\\test-cel-cards-build"
     },
     "win": {
       "target": "nsis",
