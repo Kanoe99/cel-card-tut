@@ -1,17 +1,52 @@
 {
   "name": "cel-card",
-  "product-name": "Celebration Cards",
+  "productName": "Celebration Cards",
   "version": "1.0.0",
-  "description": "app to create celebration cards",
+  "description": "App to create celebration cards",
   "main": "main.js",
   "scripts": {
-    "start": "npx electronmon ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "author": "SemyonG",
   "license": "MIT",
   "dependencies": {
-    "electron": "^32.2.0",
     "resize-img": "^1.1.2",
     "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "7zip-bin": "^5.2.0",
+    "electron-builder": "^24.3.0"
+  },
+  "build": {
+    "appId": "com.yourdomain.celcard",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/Icon_256x256.png"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/",
+        "to": "assets/"
+      }
+    ],
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Celebration Cards"
+    }
   }
 }
