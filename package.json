@@ -5,7 +5,7 @@
   "description": "app to create celebration cards",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "npx electronmon ."
   },
   "author": "SemyonG",
   "license": "MIT",
